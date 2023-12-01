@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function vws($size:40) {
+  @return math.div($size, 100) * 1rem;
+}
+
+@function trans($size:40) {
+  @return math.div($size, 100) * 1rem;
+}

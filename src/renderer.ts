@@ -26,8 +26,40 @@
  * ```
  */
 
-import './index.css';
+// import './index.css';
 import { createApp } from 'vue';
 import App from './App.vue';
+import store from './store';
+import router from './router';
+import './assets/css/index.css';
 
-createApp(App).mount('#app');
+import 'vant/lib/index.css';
+import { Lazyload } from 'vant';
+// import initSa from '@kk/sa/src/index.es.js';
+
+// let serverUrl = '',
+//     environment = '',
+//     showLog = false;
+// if (process.env.NODE_ENV === 'production') {
+//     serverUrl = 'https://sa.kkmh.com/sa?project=applet_prod';
+//     environment = 'prod';
+//     showLog = false;
+// } else {
+//     serverUrl = 'https://sa.kkmh.com/sa?project=default';
+//     environment = 'stag';
+//     showLog = true;
+// }
+
+// initSa({
+//     server_url: serverUrl,
+//     project_id: 3,
+//     show_log: showLog,
+//     environment,
+// });
+
+createApp(App).use(Lazyload, {
+    preLoad: 1.5,
+    attempt: 3,
+})
+    .use(store)
+    .use(router).mount('#app');
