@@ -85,7 +85,6 @@ const rqs = ({
     method?: string;
     json?: boolean;
 }) => {
-    // eslint-disable-next-line sonarjs/cognitive-complexity
     return new Promise<void>((resolve, reject) => {
         const { userAgent, openId, environment, channel, kk_s_t } = store.state;
 

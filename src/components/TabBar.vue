@@ -9,11 +9,7 @@
             >
                 <img
                     class="icon"
-                    :src="
-                        require(`@/assets/img/icons/tab-${item.type}${
-                            item.id == active ? '-active' : ''
-                        }.png`)
-                    "
+                    :src="getAssetsImages(item)"
                 />
                 <p class="text">{{ item.title }}</p>
             </div>
@@ -29,7 +25,7 @@ import { useStore } from 'vuex';
 import { TabBarType } from '@/types';
 const store = useStore();
 const router = useRouter();
-defineProps({
+const props = defineProps({
     active: {
         type: Number,
         default: 0,
@@ -59,6 +55,9 @@ const list = ref<Array<TabBarType> | []>(defaultData);
 const handleSwitch = (row: TabBarType) => {
     router.push({ path: `/${row.type}` });
 };
+const getAssetsImages = (item: any) => {
+    return new URL(`../assets/img/icons/tab-${item.type}${ item.id == props.active ? '-active' : '' }.png`, import.meta.url).href;
+}
 </script>
 <style lang="scss" scoped>
 /* stylelint-disable */

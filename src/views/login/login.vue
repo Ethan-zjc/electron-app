@@ -117,8 +117,8 @@ const handleSwitch = () => {
     isShowSheet.value = true;
 };
 const handleLocal = async () => {
-    const uid = ''; // 1100061569
-    const session = ''; // v1-GAgAAAAAAAAKfBggOCuvLVUb6Gm2Ic7M8LnDQUIVta8RZejzGxOmH2DEQv8A
+    const uid = '1100061569'; // 1100061569
+    const session = 'v1-GAgAAAAAAAAKfBggOCuvLVUb6Gm2Ic7M8LnDQUIVta8RZejzGxOmH2DEQv8A'; // 
     localStorage.setItem(
         'header',
         JSON.stringify({

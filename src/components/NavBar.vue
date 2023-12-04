@@ -38,6 +38,9 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter, useRoute } from 'vue-router';
+// import { ipcRenderer } from 'electron';
+
+// console.log(2222, ipcRenderer)
 const router = useRouter();
 const route = useRoute();
 const store = useStore();
@@ -96,6 +99,7 @@ const handleBack = () => {
             router.push({ path: `/find` });
         } else {
             router.go(-1);
+            // ipcRenderer.send('go-back');
         }
     }
 };

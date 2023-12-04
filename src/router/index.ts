@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import store from '../store';
 import useInit from '../hooks/useInit';
 import { mtGetLaunchOptionsSync } from '@/helpers/trans';

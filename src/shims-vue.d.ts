@@ -11,6 +11,9 @@ declare module 'spark-md5';
 declare module '@/helpers/request';
 declare module '@kk/sa/src/index.es.js';
 
+declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
+declare const MAIN_WINDOW_VITE_NAME: string;
+
 declare const mt: any;
 
 interface Window {
